@@ -29,6 +29,7 @@ main {
 	flex-direction: column;
 	border:2px solid white;
 	padding:40px;
+	padding-top:2px;
 	row-gap: 5vh;
 	
 }
@@ -92,14 +93,21 @@ main {
   /* Rounded sliders */
   .slider.round {
 	border-radius: 34px;
+	padding-left:80%;
   }
   
   .slider.round:before {
 	border-radius: 50%;
   }
-  
-  button
+
+  input[type="button"]
   {
 	border-radius: 34px;
   	left: 50%;
+  }
+
+  input[type="number"]
+  {
+	text-align: center;
+	width: 50px;
   }

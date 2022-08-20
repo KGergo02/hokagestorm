@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="stylesheets/index.css">
+	<script src="scripts/main.js" defer></script>
 	<title>Hokage Ultimate Storm Income Calculator</title>
 </head>
 
@@ -12,13 +13,28 @@
 			<p><strong>Hokage Ultimate Storm Income Calculator</strong></p>
 			
 			<p><strong>Your estimated income is: <span id="income">0 diamonds</span></strong></p>
+			
+			<p>How many days to calculate: <input type="number" id="days"></p>
 
-			<p>Are you doing quests everyday? <label class="switch">
-				<input type="checkbox">
+			<p>Are you doing quests everyday? 
+				<label class="switch">
+				<input type="checkbox"  id="dailyQuests">
 				<span class="slider round"></span>
-			  </label> </p>
+			  </label> 
+			</p>
 
-			  <button>Calculate income</button>
+			  <p>Do you participate in world boss event? 
+				<label class="switch">
+					<input type="checkbox" id="worldBoss">
+					<span class="slider round"></span>
+				  </label>
+			  </p>
+			
+			  <p id="kills" hidden>How many bosses can you kill everyday?
+				<input type="number" id="days">
+			  </p>
+
+			  <input type="button" value="Calculate income" onclick="calculateIncome()">
 
 		</section>
 	</main>
