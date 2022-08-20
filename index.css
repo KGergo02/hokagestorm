@@ -1,0 +1,42 @@
+html,
+body {
+	align-items: center;
+	justify-content: center;
+}
+
+/*** MAIN ***/
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+
+	text-align: center;
+	text-transform: uppercase;
+	font-size: x-large;
+
+	animation: fade-move 1s;
+}
+
+.text-button {
+	color: var(--highlight);
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+
+	row-gap: 5vh;
+	margin: auto 0;
+}
+
+#greet {
+	color: var(--highlight);
+}
+
+/*** MEDIA QUERIES ***/
+@media screen and (min-width: 700px) {
+	main {
+		font-size: xx-large;
+	}
+}
