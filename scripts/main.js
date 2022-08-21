@@ -28,7 +28,7 @@ function calculateIncome()
         {
             income -= 100 * days;
 
-            income += document.getElementById("bossesKilled").value * 100;
+            income += document.getElementById("bossesKilled").value * 100 * days;
         }
 
         var amounts = [10,12,14,16,20];
