@@ -12,7 +12,7 @@
 		<section id="content">
 			<p id="top"><strong>Hokage Ultimate Storm Income Calculator</strong></p>
 			
-			<p><strong>Your estimated income is:</strong></p>
+			<p><strong>Your estimated total income is:</strong></p>
 			
 			</span><span id="income">0 diamonds</span>
 
@@ -43,10 +43,20 @@
 			
 			  <input type="number" min="0" value="0" id="serverKills">
 
+			  <p>Enter your arena rewards</p>
+			
+			  <input type="number" min="0" value="0" id="arenaRewards">
+
+			  <p> Do you login every day?</p>
+			<label class="switch">
+				<input type="checkbox" id="login">
+				<span class="slider round"></span>
+			  </label>
+
 			  <br><br><br>
 
 			  <section id="buttons">
-				  <input type="button" value="Clear inputs" onclick="clearInputs()">
+				  <input type="button" value="Clear inputs" onclick="clearInputs()"></input>
 				  <a href="#top"></input><input type="button" value="Calculate income"  onclick="calculateIncome()"></a>
 				</section>
 		</section>

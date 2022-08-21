@@ -36,16 +36,11 @@ main
 	font-size: large;
   }
 
-  section>input[type="button"]
-  {
-	font-size:large;
-  }
-
   input[type="button"]
   {
 	border-radius: 34px;
   	left: 50%;
-	font-size:x-large;
+	font-size:x-large !important;
 	color:white;
 	background-color:black;
   }
