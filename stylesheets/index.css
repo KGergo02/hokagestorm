@@ -28,7 +28,7 @@ main
 	padding-bottom:1%;
 	padding-left:50px;
 	padding-right:50px;
-	font-size:x-large;
+	font-size:xx-large;
 }
 
   input
@@ -40,7 +40,7 @@ main
   {
 	border-radius: 34px;
   	left: 50%;
-	font-size:x-large !important;
+	font-size:xx-large !important;
 	color:white;
 	background-color:black;
   }
@@ -59,7 +59,7 @@ main
 	flex-wrap:wrap;
 	align-items:center;
 	column-gap:2vh;
-	font-size:x-large;
+	font-size:xx-large;
 	margin-top:5%;
 	margin-bottom:5%;
 }
