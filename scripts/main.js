@@ -5,7 +5,7 @@ function clearInputs()
     document.getElementById("dailyQuests").checked = false;
     document.getElementById("worldBoss").checked = false;
     document.getElementById("days").value = "0";
-    document.getElementById("kills").value = "0";
+    document.getElementById("bossesKilled").value = "0";
     document.getElementById("serverKills").value = "0"; 
 }
 
