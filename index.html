@@ -10,32 +10,45 @@
 <body>
 	<main>
 		<section id="content">
-			<p><strong>Hokage Ultimate Storm Income Calculator</strong></p>
+			<p id="top"><strong>Hokage Ultimate Storm Income Calculator</strong></p>
 			
-			<p><strong>Your estimated income is: <span id="income">0 diamonds</span></strong></p>
+			<p><strong>Your estimated income is:</strong></p>
 			
-			<p>How many days to calculate: <input type="number" id="days"></p>
+			</span><span id="income">0 diamonds</span>
 
-			<p>Are you doing quests everyday? 
-				<label class="switch">
+			<p>How many days to calculate?</p>
+			
+			<input type="number" id="days" value="0" min="1">
+
+			<p >Are you doing quests every day?</p>
+
+			<label class="switch">
 				<input type="checkbox"  id="dailyQuests">
 				<span class="slider round"></span>
 			  </label> 
-			</p>
 
-			  <p>Do you participate in world boss event? 
-				<label class="switch">
-					<input type="checkbox" id="worldBoss">
-					<span class="slider round"></span>
-				  </label>
-			  </p>
+			  <p> Do you participate in world boss event?</p>
+			<label class="switch">
+				<input type="checkbox" onchange="reveal()" id="worldBoss">
+				<span class="slider round"></span>
+			  </label>
 			
-			  <p id="kills" hidden>How many bosses can you kill everyday?
-				<input type="number" id="days">
-			  </p>
+			  <section id="kills" hidden>
+					<p>How many bosses can you kill?</p>
+				
+					<input type="number" value="0" min="0" max="10" id="bossesKilled">
+			  </section>
 
-			  <input type="button" value="Calculate income" onclick="calculateIncome()">
+			  <p>How many bosses can your server kill?</p>
+			
+			  <input type="number" min="0" value="0" id="serverKills">
 
+			  <br><br><br>
+
+			  <section id="buttons">
+				  <input type="button" value="Clear inputs" onclick="clearInputs()">
+				  <a href="#top"></input><input type="button" value="Calculate income"  onclick="calculateIncome()"></a>
+				</section>
 		</section>
 	</main>
 </body>

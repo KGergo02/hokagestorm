@@ -7,36 +7,72 @@ body {
 }
 
 /*** MAIN ***/
-main {
+main 
+{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 90%;
-
 	text-align: center;
 	text-transform: uppercase;
-	font-size:x-large;
-
 	animation: fade-move 1s;
 }
 
-.text-button {
-	color: var(--highlight);
+#content 
+{
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction: column;
+	align-items:center;
+	border:2px solid white;
+	row-gap: 1vh;
+	padding-bottom:1%;
+	padding-left:50px;
+	padding-right:50px;
+	font-size:x-large;
 }
 
-#content {
-	display: flex;
-	flex-direction: column;
-	border:2px solid white;
-	padding:40px;
-	padding-top:2px;
-	row-gap: 5vh;
-	
+  input
+  {
+	font-size: large;
+  }
+
+  section>input[type="button"]
+  {
+	font-size:large;
+  }
+
+  input[type="button"]
+  {
+	border-radius: 34px;
+  	left: 50%;
+	font-size:x-large;
+	color:white;
+	background-color:black;
+  }
+
+  input[type="number"]
+  {
+	text-align: center;
+	width: 80px;
+  }
+
+#buttons
+{
+	display:flex;
+	flex-shrink: inherit;
+	flex-direction:row;
+	flex-wrap:wrap;
+	align-items:center;
+	column-gap:2vh;
+	font-size:x-large;
+	margin-top:5%;
+	margin-bottom:5%;
 }
 
 #income
 {
 	color:green;
+	font-weight:bold;
 }
 
 .switch {
@@ -100,14 +136,32 @@ main {
 	border-radius: 50%;
   }
 
-  input[type="button"]
-  {
-	border-radius: 34px;
-  	left: 50%;
-  }
+  @media screen and (min-width: 700px) {
+	#content 
+	{
+		font-size: x-large;
+	}
 
-  input[type="number"]
-  {
-	text-align: center;
-	width: 50px;
-  }
+	section > input[type="button"]
+	{
+		font-size:large;
+	}
+
+	input
+	{
+		font-size: large;
+	}
+
+	#buttons
+	{
+		display:flex;
+		flex-shrink: inherit;
+		flex-direction:row;
+		flex-wrap:wrap;
+		align-items:center;
+		column-gap:2vh;
+		font-size:x-large;
+		margin-top:5%;
+		margin-bottom:5%;
+	}
+}
