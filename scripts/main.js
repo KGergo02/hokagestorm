@@ -18,7 +18,9 @@ function calculateIncome()
         var days = document.getElementById("days").value;
     
         var income = 0;
-    
+        
+        var cost = 0;
+
         if(document.getElementById("dailyQuests").checked)
         {
             income += 70;
@@ -26,7 +28,7 @@ function calculateIncome()
     
         if(document.getElementById("worldBoss").checked)
         {
-            income -= 100 * days;
+            cost += 100 * days;
 
             income += document.getElementById("bossesKilled").value * 100;
         }
@@ -47,6 +49,8 @@ function calculateIncome()
 
 
         income *= days;
+        
+        income -= cost;
     
         if(income > 1000)
         {
