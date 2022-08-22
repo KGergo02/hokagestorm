@@ -9,43 +9,61 @@
 
 <body>
 	<main>
-		<section id="content">
+		<section class="content">
 			<p id="top"><strong>Hokage Ultimate Storm Income Calculator</strong></p>
 			
 			<p><strong>Your estimated total income is:</strong></p>
 			
-			</span><span id="income">0 diamonds</span>
-
-			<p>How many days to calculate?</p>
+			</span><span id="income" class="income">0 diamonds</span>
 			
-			<input type="number" id="days" value="0" min="1">
+			<section>
+				<p>Choose a method to count the days</p>
 
+				<select id="selectDays" onchange="setType()">
+					<option selected>Number</option>
+					<option>Date</option>
+				</select>
+
+				</section>
+				
+				<input type="number" id="days">
+				
 			<p >Are you doing quests every day?</p>
 
 			<label class="switch">
 				<input type="checkbox"  id="dailyQuests">
 				<span class="slider round"></span>
-			  </label> 
+			  </label>
+
+			  <p id="questsIncome" class="income_each">0 diamonds</p>
 
 			  <p> Do you participate in world boss event?</p>
 			<label class="switch">
 				<input type="checkbox" onchange="reveal()" id="worldBoss">
 				<span class="slider round"></span>
 			  </label>
+
+			  <p id="worldCost" class="cost" >0 diamonds</p>
 			
-			  <section id="kills" hidden>
+			  <section id="kills" >
 					<p>How many bosses can you kill?</p>
 				
 					<input type="number" value="0" min="0" max="10" id="bossesKilled">
+
+					<p id="bossesIncome" class="income_each" >0 diamonds</p>
 			  </section>
 
 			  <p>How many bosses can your server kill?</p>
 			
 			  <input type="number" min="0" value="0" id="serverKills">
 
+			  <p id="serverKillIncome" class="income_each" >0 diamonds</p>
+
 			  <p>Enter your arena rewards</p>
 			
 			  <input type="number" min="0" value="0" id="arenaRewards">
+
+			  <p id="arenaIncome" class="income_each" >0 diamonds</p>
 
 			  <p> Do you login every day?</p>
 			<label class="switch">
@@ -53,11 +71,68 @@
 				<span class="slider round"></span>
 			  </label>
 
+			  <p id="loginIncome" class="income_each" >0 diamonds</p>
+
+			  <p>How many bosses can you kill in daily instance?</p>
+			
+			  <input type="number" min="0" max="8" value="0" id="dailyInstance">
+
+			  
+				<p id="instanceIncome" class="income_each" >0 diamonds</p>
+				<p id="instanceCost" class="cost" >0 diamonds</p>
+			  
+
+			  <p>How many bosses can you kill in ninja pursuit?</p>
+			
+			  <input type="number" min="0" max="10" value="0" id="ninjaPursuit">
+
+			  <p id="pursuitIncome" class="income_each" >0 diamonds</p>
+			  
+			  <br>
+			  
+				<section class="box">
+					<p>Clan Wars Rank:</p>
+					<p>Your Clan Rank:</p>
+					<p>Kage Trials Rank:</p>
+					<select id="clanWars">
+						<option value="1500">Top 1</option>
+						<option value="1200">Top 2</option>
+						<option value="900">Top 3</option>
+						<option value="700">Top 5</option>
+						<option value="500">Top 10</option>
+						<option value="300">Top 50</option>
+						<option value = "0" selected>Do not calculate</option>
+					</select>
+					<select id="clanRank">
+						<option value="1250">Top 1</option>
+						<option value="1000">Top 2</option>
+						<option value="850">Top 3</option>
+						<option value="700">Top 5</option>
+						<option value="500">Top 10</option>
+						<option value="300">Top 30</option>
+						<option value = "0" selected>Do not calculate</option>
+					</select>
+					<select id="kageTrials">
+						<option value="3200">King</option>
+						<option value="3000">Master</option>
+						<option value="1600">Platinum</option>
+						<option value="1200">Gold</option>
+						<option value="800">Silver</option>
+						<option value="400">Bronze</option>
+						<option value="0" selected>Do not calculate</option>
+					  </select>
+					  <p id="warIncome" class="income_each" >0 diamonds</p>
+					  <p id="clanIncome" class="income_each" >0 diamonds</p>
+					  <p id="kageIncome" class="income_each" >0 diamonds</p>
+				</section>
+
 			  <br><br><br>
 
-			  <section id="buttons">
-				  <input type="button" value="Clear inputs" onclick="clearInputs()"></input>
-				  <a href="#top"></input><input type="button" value="Calculate income"  onclick="calculateIncome()"></a>
+			  <section class="box_buttons">
+				  	<a href="#top">
+					  <input type="button" value="Clear inputs" onclick="clearInputs()">
+					  <input type="button" value="Calculate income" class="top-right"  onclick="calculateIncome()">
+					</a>
 				</section>
 		</section>
 	</main>

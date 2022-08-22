@@ -17,7 +17,7 @@ main
 	animation: fade-move 1s;
 }
 
-#content 
+.content
 {
 	display: flex;
 	flex-wrap:wrap;
@@ -28,30 +28,10 @@ main
 	padding-bottom:1%;
 	padding-left:50px;
 	padding-right:50px;
-	font-size:xx-large;
+	font-size:large;
 }
 
-  input
-  {
-	font-size: large;
-  }
-
-  input[type="button"]
-  {
-	border-radius: 34px;
-  	left: 50%;
-	font-size:xx-large !important;
-	color:white;
-	background-color:black;
-  }
-
-  input[type="number"]
-  {
-	text-align: center;
-	width: 80px;
-  }
-
-#buttons
+.container
 {
 	display:flex;
 	flex-shrink: inherit;
@@ -59,15 +39,86 @@ main
 	flex-wrap:wrap;
 	align-items:center;
 	column-gap:2vh;
-	font-size:xx-large;
 	margin-top:5%;
 	margin-bottom:5%;
 }
 
-#income
+.box
 {
-	color:green;
+	display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: repeat(3, 30%);
+		grid-template-rows: repeat(3, 30%);
+		grid-column-gap: 3%;
+		grid-row-gap: 5%;
+		border:2px solid white;
+		font-size:large;
+		padding: 4%;
+		padding-bottom:1%;
+}
+
+.box_buttons > *
+{
+	display:inline;
+} 
+
+
+
+select
+{
+	font-size: large;
+	text-align: center;
+}
+
+input[type="button"]
+{
+	border-radius: 34px;
+	
+	font-size:x-large;
+	color:white;
+	background-color:black;
+}
+
+input[type="button"]:hover
+{
+	cursor:pointer;
+}
+
+input[type="number"]
+{
+	text-align: center;
+	width: 80px;
+}
+
+.income
+{
+	color:lime;
 	font-weight:bold;
+	border: 10px double lime;
+	padding:5px;
+}
+
+.income_each
+{
+	color:lime;
+	font-weight:bold;
+}
+
+.income_each::before
+{
+	content:'+ ';
+}
+
+.cost
+{
+	color:red;
+	font-weight:bold;
+}
+
+.cost::before
+{
+	content:'- ';
 }
 
 .switch {
@@ -132,31 +183,23 @@ main
   }
 
   @media screen and (min-width: 700px) {
-	#content 
+	.content
+	{
+		font-size:x-large;
+	}
+	
+	.box
+	{
+		font-size:x-large;
+	}
+
+	.income_each
+	{
+		font-size: x-large !important;
+	}
+
+	.cost
 	{
 		font-size: x-large;
-	}
-
-	section > input[type="button"]
-	{
-		font-size:large;
-	}
-
-	input
-	{
-		font-size: large;
-	}
-
-	#buttons
-	{
-		display:flex;
-		flex-shrink: inherit;
-		flex-direction:row;
-		flex-wrap:wrap;
-		align-items:center;
-		column-gap:2vh;
-		font-size:x-large;
-		margin-top:5%;
-		margin-bottom:5%;
 	}
 }
