@@ -226,7 +226,7 @@ function checkValues()
 
     var numbers = new RegExp("^[0-9]+$");
 
-    if(document.getElementById("days").value <= 0 || !numbers.test(document.getElementById("days").value))
+    if(document.getElementById("days").getAttribute("type") == "number" && (document.getElementById("days").value <= 0 || !numbers.test(document.getElementById("days").value)))
     {
         errors++;
 
