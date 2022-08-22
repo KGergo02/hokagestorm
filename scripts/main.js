@@ -340,8 +340,5 @@ function Hide()
 function unHide(name,amount)
 {
     document.getElementById(name).innerHTML = amount >= 1000 ? amount / 1000 + "K diamonds" : amount +  " diamonds";
-    console.log(name);
-    console.log(amount);
     document.getElementById(name).removeAttribute("hidden",false);
-    console.log(document.getElementById(name));
 }
