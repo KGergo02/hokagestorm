@@ -63,9 +63,9 @@ function calculateIncome()
     
         if(document.getElementById("worldBoss").checked)
         {
-            cost += 100 * days;
+            cost += Number(document.getElementById("worldBossTicket").value * 10) * days;
 
-            unHide("worldCost",100 * days);
+            unHide("worldCost",Number(document.getElementById("worldBossTicket").value * 10) * days);
 
             income += document.getElementById("bossesKilled").value * 100 * days;
 

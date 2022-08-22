@@ -38,12 +38,11 @@
 			  <p id="questsIncome" class="income_each">0 diamonds</p>
 
 			  <p> Do you participate in world boss event?</p>
+			  
 			<label class="switch">
 				<input type="checkbox" onchange="reveal()" id="worldBoss">
 				<span class="slider round"></span>
 			  </label>
-
-			  <p id="worldCost" class="cost" >0 diamonds</p>
 			
 			  <section id="kills" >
 					<p>How many bosses can you kill?</p>
@@ -51,6 +50,12 @@
 					<input type="number" value="0" min="0" max="10" id="bossesKilled">
 
 					<p id="bossesIncome" class="income_each" >0 diamonds</p>
+
+					<p>How many tickets do you buy for World Boss?</p>
+
+					<input type="number" value="0" min="0" max="10" id="worldBossTicket">
+					
+					<p id="worldCost" class="cost" >0 diamonds</p>
 			  </section>
 
 			  <p>How many bosses can your server kill?</p>
