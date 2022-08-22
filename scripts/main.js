@@ -341,7 +341,7 @@ function unHide(name,amount)
 {
     document.getElementById(name).innerHTML = amount >= 1000 ? amount / 1000 + "K diamonds" : amount +  " diamonds";
     
-    if(amount > 0)
+    if(amount > 0 || name == "warIncome" || name == "clanIncome" || name == "kageIncome")
     {
         document.getElementById(name).removeAttribute("hidden",false);
     }
