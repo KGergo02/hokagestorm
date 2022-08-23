@@ -282,6 +282,13 @@ function checkValues()
         }
     }
 
+    if(document.getElementById("worldBossTicket").value < 0 || document.getElementById("worldBossTicket").value > 20 || !numbers.test(document.getElementById("worldBossTicket").value))
+    {
+        errors++;
+
+        message += (document.getElementById("worldBossTicket").value < 0 ? "Ticket amount can't be lower than 0" : "Ticket amount can't be higher than 20");
+    }
+
     if(errors == 0)
     {
         return true;
