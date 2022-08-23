@@ -289,6 +289,13 @@ function checkValues()
         message += (document.getElementById("worldBossTicket").value < 0 ? "Ticket amount can't be lower than 0" : "Ticket amount can't be higher than 20");
     }
 
+    if(document.getElementById("ninjaPursuit").value < 0 || document.getElementById("ninjaPursuit").value > 20 || !numbers.test(document.getElementById("ninjaPursuit")))
+    {
+        errors++;
+
+        message += (document.getElementById("ninjaPursuit").value < 0 ? "Pursuit amount can't be lower than 0" : "Pursuit amount can't be higher than 20");
+    }
+
     if(errors == 0)
     {
         return true;
