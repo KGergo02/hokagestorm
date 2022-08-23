@@ -19,6 +19,7 @@ function clearInputs()
     document.getElementById("clanRank").value = 0;
     document.getElementById("kageTrials").value = 0;
     document.getElementById("ninjaPursuit").value = 0;
+    document.getElementById("worldBossTicket").value = 0;
 }
 
 function calculateIncome()
