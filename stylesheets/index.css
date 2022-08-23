@@ -71,6 +71,11 @@ select
 	text-align: center;
 }
 
+a
+{
+	text-decoration:none;
+}
+
 input[type="button"]
 {
 	border-radius: 34px;
