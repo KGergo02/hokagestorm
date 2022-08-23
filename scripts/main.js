@@ -276,7 +276,7 @@ function checkValues()
         message += (document.getElementById("worldBossTicket").value < 0 ? "Ticket amount can't be lower than 0" : "Ticket amount can't be higher than 20");
     }
 
-    if(document.getElementById("ninjaPursuit").value < 0 || document.getElementById("ninjaPursuit").value > 20 || !numbers.test(document.getElementById("ninjaPursuit")))
+    if(document.getElementById("ninjaPursuit").value < 0 || document.getElementById("ninjaPursuit").value > 20 || !numbers.test(document.getElementById("ninjaPursuit").value))
     {
         errors++;
 
