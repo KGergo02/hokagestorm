@@ -269,20 +269,6 @@ function checkValues()
         message += "Daily Instance kills can't be lower than 0";
     }
 
-    if(document.getElementById("ninjaPursuit").value < 0 || document.getElementById("ninjaPursuit").value > 10 || !numbers.test(document.getElementById("ninjaPursuit").value))
-    {
-        errors++;
-        
-        if(document.getElementById("ninjaPursuit").value > 10)
-        {
-            message += "Ninja Pursuit kills can't be higher than 10";
-        }
-        else
-        {
-            message += "Ninja Pursuit kills can't be lower than 0";
-        }
-    }
-
     if(document.getElementById("worldBossTicket").value < 0 || document.getElementById("worldBossTicket").value > 20 || !numbers.test(document.getElementById("worldBossTicket").value))
     {
         errors++;
